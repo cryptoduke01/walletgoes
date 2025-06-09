@@ -158,7 +158,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
         >
-          No staking. No price limits. Just hold and earn — every trade makes your wallet go BRRRRR.
+          No staking. No price limits. Just hold and earn. 
+          Every trade makes your wallet go BRRRRR.
         </motion.p>
 
         <motion.div
