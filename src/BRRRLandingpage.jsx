@@ -355,7 +355,7 @@ const HowToBuy = () => {
     {
       number: "2",
       title: "DEPOSIT SOL",
-      description: "Buy SOL from exchange or deposit some SOL into walet."
+      description: "Fund your wallet with SOL by depositing from a centralized exchange."
     },
     {
       number: "3",
@@ -384,7 +384,7 @@ const HowToBuy = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
