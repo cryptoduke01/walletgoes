@@ -139,20 +139,18 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-8xl font-black text-white mb-6"
         >
-          WELCOME{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-            BRRR
-          </span>
+          BRRR{' '}
         </motion.h1>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl md:text-4xl font-bold text-purple-300 mb-8"
+          className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
         >
           WELCOME TO $BRRR
         </motion.h2>
+        <br />
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -427,19 +425,19 @@ const Footer = () => {
     { 
       name: "X (Twitter)", 
       icon: "𝕏", 
-      url: "https://x.com/brrr", 
+      url: "https://x.com/walletgoesbrrr", 
       gradient: "from-blue-500 to-cyan-500" 
     },
     { 
       name: "Telegram", 
       icon: "✈️", 
-      url: "https://t.me/brrr", 
+      url: "https://t.me/BRRR_P0RTAL", 
       gradient: "from-blue-400 to-blue-600" 
     },
     { 
       name: "DEXScreener", 
       icon: "📈", 
-      url: "https://dexscreener.com/", 
+      url: "https://t.me/KaiPrints", 
       gradient: "from-green-500 to-emerald-500" 
     }
   ];
