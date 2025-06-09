@@ -158,7 +158,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
         >
-          Fast. Secure. Borderless. WalletGoesBRR is a blazing-fast, user-friendly digital wallet designed for the modern Web3 world.
+          No complex staking. No price limits. Just hold and earn — every trade makes your wallet go BRRRRR.
         </motion.p>
 
         <motion.div
@@ -167,14 +167,6 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(168, 85, 247, 0.4)" }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-full text-lg shadow-lg"
-          >
-            DEV
-          </motion.button>
-
           <div className="bg-gray-900/80 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4">
             <p className="text-gray-400 text-sm mb-2">CA</p>
             <p className="text-purple-300 font-mono text-sm break-all" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
@@ -222,45 +214,45 @@ const Overview = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Overview</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            WalletGoesBRR is a next-generation crypto wallet built for speed, simplicity, and scalability. Whether you're a DeFi power user, NFT collector, or just getting started with crypto, WalletGoesBRR gets your transactions from pending to confirmed in record time — with no compromise on security.
+            $BRRR is a revolutionary token that rewards its holders in $SOL by collecting all the swap fees from the liquidity pool and distributing 75% of them to the holders. With low trading fees, high volatility, and a hold-to-earn mechanism, BRRR is built for degens, stakers, and liquidity providers.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-            icon="⚡"
-            title="Instant Transactions"
-            description="Enjoy faster-than-average transaction speeds thanks to our optimized signing pipeline."
+            icon="💸"
+            title="Holders First"
+            description="Hold $BRRR and earn rewards in $SOL — 75% of the swap fees from the liquidity pool go directly to holders."
             delay={0.1}
           />
           <FeatureCard
-            icon="🔐"
-            title="Secure by Design"
-            description="Biometric and multi-sig support built-in for maximum security."
+            icon="🔒"
+            title="No Lockups Needed"
+            description="Earn without staking or locking funds. Just hold $BRRR and receive your share of revenue."
             delay={0.2}
           />
           <FeatureCard
-            icon="🌍"
-            title="Cross-Chain Ready"
-            description="Interact with Ethereum, Solana, and more with ease."
+            icon="⚡"
+            title="Based on Solana"
+            description="The Solana blockchain allows for the most efficient distribution given the low gas fees and high transaction speed."
             delay={0.3}
           />
           <FeatureCard
-            icon="📱"
-            title="Mobile & Desktop"
-            description="Available as browser extension and mobile app."
+            icon="⚙️"
+            title="Auto Fee Distribution"
+            description="The technology ensures seamless and transparent SOL rewards every 10 minutes when the volume is sufficient"
             delay={0.4}
           />
           <FeatureCard
-            icon="🧩"
-            title="DApp Integrations"
-            description="Seamlessly connects to hundreds of dApps."
+            icon="🔥"
+            title="No Transfer Tax"
+            description="$BRRR rewards the holders purely based on trading fees collected by the liquidity pool and no tax."
             delay={0.5}
           />
           <FeatureCard
-            icon="🧠"
-            title="Smart Suggestions"
-            description="Intelligent gas fee and network recommendations."
+            icon="🫂"
+            title="Community Backed"
+            description="In the core of every project lays the community. That's why through our rewards structure we are building one of the most supportive diamond handed communities in crypto."
             delay={0.6}
           />
         </div>
@@ -269,53 +261,9 @@ const Overview = () => {
   );
 };
 
-const TechStack = () => {
-  const techItems = [
-    { category: "Frontend", tech: "React Native / Next.js" },
-    { category: "Backend", tech: "Node.js / Rust (transaction signing)" },
-    { category: "Blockchain", tech: "EVM-compatible chains, Solana, Layer 2s" },
-    { category: "Security", tech: "Ledger integration, 2FA, encrypted vaults" },
-    { category: "Storage", tech: "Encrypted local storage + IPFS for backups" }
-  ];
-
-  return (
-    <section id="tech-stack" className="py-20 bg-gradient-to-br from-purple-950/20 to-black" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Tech Stack</span>
-          </h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-900/60 backdrop-blur-sm border border-purple-500/30 rounded-lg p-6 hover:border-purple-400/50 transition-all duration-300"
-            >
-              <h3 className="text-purple-400 font-bold text-lg mb-2">{item.category}:</h3>
-              <p className="text-gray-300" style={{ fontFamily: 'JetBrains Mono, monospace' }}>{item.tech}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 const Tokenomics = () => {
   return (
-    <section id="tokenomics" className="py-20 bg-black" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+    <section id="tokenomics" className="py-20 bg-gradient-to-br from-purple-950/20 to-black" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -379,7 +327,7 @@ const HowToBuy = () => {
   ];
 
   return (
-    <section id="how-to-buy" className="py-20 bg-gradient-to-br from-purple-950/20 to-black" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+    <section id="how-to-buy" className="py-20 bg-black" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -566,7 +514,6 @@ const BRRRLandingPage = () => {
           <NavBar />
           <Hero />
           <Overview />
-          <TechStack />
           <Tokenomics />
           <HowToBuy />
           <Footer />
