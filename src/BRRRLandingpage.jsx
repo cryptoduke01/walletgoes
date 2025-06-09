@@ -158,7 +158,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
         >
-          No complex staking. No price limits. Just hold and earn — every trade makes your wallet go BRRRRR.
+          No staking. No price limits. Just hold and earn — every trade makes your wallet go BRRRRR.
         </motion.p>
 
         <motion.div
@@ -276,26 +276,21 @@ const Tokenomics = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">TOKENOMICS</span>
           </h2>
 
-          <div className="bg-gradient-to-br from-gray-900/80 to-purple-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-12 max-w-2xl mx-auto">
-            <div className="text-6xl mb-6">💎</div>
-            <h3 className="text-2xl font-bold text-purple-300 mb-4">TOTAL SUPPLY</h3>
-            <p className="text-5xl md:text-6xl font-black text-white" style={{ fontFamily: 'JetBrains Mono, monospace' }}>1BN</p>
-          </div>
-        </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Total Supply */}
+            <div className="bg-gradient-to-br from-gray-900/80 to-purple-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-12">
+              <div className="text-6xl mb-6">💎</div>
+              <h3 className="text-2xl font-bold text-purple-300 mb-4">TOTAL SUPPLY</h3>
+              <p className="text-5xl md:text-6xl font-black text-white" style={{ fontFamily: 'JetBrains Mono, monospace' }}>1BN</p>
+            </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-gray-900/80 to-purple-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8"
-        >
-          <h3 className="text-2xl font-bold text-white mb-4">
-            🪙 OTHER BRRR CRYPTO PREDICTIONS 👑
-          </h3>
-          <div className="text-6xl mb-4">📝</div>
-          <p className="text-purple-300 font-bold text-xl">License</p>
-          <p className="text-gray-300 mt-2">MIT © 2025 WalletGoesBRR Team</p>
+            {/* Bonding Curve */}
+            <div className="bg-gradient-to-br from-gray-900/80 to-purple-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-12">
+              <div className="text-6xl mb-6">📐</div>
+              <h3 className="text-2xl font-bold text-purple-300 mb-4">BONDING CURVE</h3>
+              <p className="text-5xl md:text-6xl font-black text-white" style={{ fontFamily: 'JetBrains Mono, monospace' }}>75 SOL</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
@@ -307,22 +302,17 @@ const HowToBuy = () => {
     {
       number: "1",
       title: "CREATE A WALLET",
-      description: "Download MetaMask or another Solana-compatible wallet. Make sure it's connected to the Ethereum network"
+      description: "Download Phantom or another Solana-compatible wallet and create your account."
     },
     {
       number: "2",
-      title: "GET SOME SOLANA",
-      description: "Buy SOLANA on a centralized exchange (like Coinbase, Bybit or Binance) and transfer it to your wallet"
+      title: "GO TO JUPITER",
+      description: "Head over to jup.ag and connect your wallet then go to the spot swap section."
     },
     {
       number: "3",
-      title: "GO TO UNISWAP",
-      description: "Head over to Uniswap and connect your wallet. Paste the official $BARN contract address"
-    },
-    {
-      number: "4",
-      title: "SWAP SOL FOR $BARN",
-      description: "Click and select $BARN token, or paste the token address contract. Enter the amount of SOL and confirm the transaction. Now you're holding $BARN"
+      title: "SWAP SOL FOR $BRRR",
+      description: "Paste the contract address of $BRRR, enter the amount of SOL you would like to buy with, press swap and confirm the transaction."
     }
   ];
 
@@ -341,7 +331,7 @@ const HowToBuy = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -351,9 +341,9 @@ const HowToBuy = () => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-gray-900/80 to-purple-900/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300"
             >
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-black text-lg">{step.number}</span>
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-black text-2xl">{step.number}</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
@@ -378,14 +368,14 @@ const Footer = () => {
     },
     { 
       name: "Telegram", 
-      icon: "✈️", 
+      icon: "📱", 
       url: "https://t.me/BRRR_P0RTAL", 
       gradient: "from-blue-400 to-blue-600" 
     },
     { 
-      name: "DEXScreener", 
+      name: "Chart", 
       icon: "📈", 
-      url: "https://t.me/KaiPrints", 
+      url: "https://gmgn.ai/sol/token/FwyNd1G55fPfAN3RueT8uDvk8sZPCNjrLp3b9ir1ttFg", 
       gradient: "from-green-500 to-emerald-500" 
     }
   ];
@@ -454,10 +444,7 @@ const Footer = () => {
             className="mb-8"
           >
             <p className="text-gray-300 text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
-              $BRRR - The memecoin that brings together crypto enthusiasts, meme lovers, and digital pioneers in one unstoppable community.
-            </p>
-            <p className="text-purple-400 font-semibold text-sm">
-              🚀 Fast • 🔒 Secure • 🌍 Borderless • 💎 Community-Driven
+              With low trading fees, high volatility, and a hold-to-earn mechanism, BRRR is built for degens, stakers, and liquidity providers - everyone is welcome in our versatile community
             </p>
           </motion.div>
 
@@ -474,8 +461,6 @@ const Footer = () => {
           >
             <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 text-gray-500 text-sm">
               <p>© 2025 BRRR Token. All rights reserved.</p>
-              <span className="hidden md:block">•</span>
-              <p>Built for the future of Web3</p>
             </div>
             
             <div className="text-xs text-gray-600">
