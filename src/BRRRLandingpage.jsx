@@ -219,7 +219,7 @@ const Overview = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            🚀 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Overview</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Overview</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             WalletGoesBRR is a next-generation crypto wallet built for speed, simplicity, and scalability. Whether you're a DeFi power user, NFT collector, or just getting started with crypto, WalletGoesBRR gets your transactions from pending to confirmed in record time — with no compromise on security.
@@ -289,7 +289,7 @@ const TechStack = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            🧑‍💻 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Tech Stack</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Tech Stack</span>
           </h2>
         </motion.div>
 
@@ -331,7 +331,7 @@ const Tokenomics = () => {
           <div className="bg-gradient-to-br from-gray-900/80 to-purple-900/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-12 max-w-2xl mx-auto">
             <div className="text-6xl mb-6">💎</div>
             <h3 className="text-2xl font-bold text-purple-300 mb-4">TOTAL SUPPLY</h3>
-            <p className="text-5xl md:text-6xl font-black text-white" style={{ fontFamily: 'JetBrains Mono, monospace' }}>1,000,000,000</p>
+            <p className="text-5xl md:text-6xl font-black text-white" style={{ fontFamily: 'JetBrains Mono, monospace' }}>1BN</p>
           </div>
         </motion.div>
 
